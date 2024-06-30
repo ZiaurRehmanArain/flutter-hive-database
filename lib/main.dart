@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:todoapp/pages/home_page.dart';
 
@@ -21,9 +20,9 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.yellow,
           primaryColor: Colors.yellow,
           floatingActionButtonTheme:
-              FloatingActionButtonThemeData(backgroundColor: Colors.yellow),
-          appBarTheme: AppBarTheme(backgroundColor: Colors.yellow)),
-      home: HomePage(),
+           const   FloatingActionButtonThemeData(backgroundColor: Colors.yellow),
+          appBarTheme:const AppBarTheme(backgroundColor: Colors.yellow)),
+      home:const HomePage(),
     );
   }
 }

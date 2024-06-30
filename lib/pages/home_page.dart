@@ -13,10 +13,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final _box = Hive.box('mybox');
-  // List toDoList = [
-  //   ['make first', true],
-  //   ['make sceond', false]
-  // ];
+
   ToDoDataBase db = ToDoDataBase();
   TextEditingController controller = TextEditingController();
 
@@ -31,6 +28,7 @@ class _HomePageState extends State<HomePage> {
     db.toDoList.add([controller.text, false]);
     setState(() {});
     db.UpdataDataBase();
+    controller.clear();
     Navigator.pop(context);
   }
 
